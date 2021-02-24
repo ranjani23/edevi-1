@@ -1,0 +1,58 @@
+.GetInTouchContainer {
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+}
+
+.HeaderNavBar {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+}
+
+.HeaderNavBar > span {
+    font-size: 20px;
+    margin-left: 1.2rem;
+}
+
+.BodyContent {
+    display: flex;
+    padding: 1rem;
+}
+
+.TextContainer {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    font-size: 2rem;
+    justify-content: center;
+}
+
+.GetInTouchContainer > section {
+    display: flex;
+    padding: 1rem;
+}
+section > a {
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 0.5rem;
+    color: #FEDC31;
+}
+
+.GetInTouchContainer .MuiDivider-root {
+    background-color: #555556;
+    margin-top: 3.2rem;
+    margin-bottom: 3rem;
+}
+
+.FooterItems {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.FooterIconsContainer {
+    display: flex;
+    padding-top: 0.5rem;
+}

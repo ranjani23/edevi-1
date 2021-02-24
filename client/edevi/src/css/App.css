@@ -46,6 +46,10 @@ body {
 /* Landing page Module*/
 
 .LandingPageModule {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
     height: 100%;
     background-image: url('../images/LandingBackground.png');
@@ -54,21 +58,19 @@ body {
 }
 
 .LandingPageModule .AppLogoImage {
-  width:100px;
-  height: 100px;
-  position: absolute;
-  top: calc(40%);
-  left: calc(40%);
+  width: 100px;
+  height: auto;
 }
 
+@media only screen and (min-width: 600px) {
+  .LandingPageModule .AppLogoImage {
+    width: 180px;
+    height: auto;
+  }
+}
 
 .LandingPageModule .landingPageHeader {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
   font-size: 32px;
   opacity: 0.8;
   font-family: 'Lora, Italic';
@@ -79,9 +81,9 @@ body {
     position: absolute;
     bottom: 10%;
     color: white;
-    /* left: 40%; */
+    max-width: 400px;
     width: 80%;
-    left: 10%;
+    margin: 0 auto;
     text-transform: none;
     font-size: var(--font-size-large);
     font-family: 'Open Sans bold'
@@ -142,7 +144,10 @@ body {
   margin: 19px;
 }
 
-.GlitchScreen .GlitchTitle .GlitchName,
+.GlitchScreen .GlitchTitle .GlitchName {
+  color: var(--special-text-color);
+}
+
 .PledgeScreen .PledgeTitleSpecial {
   color: var(--special-text-color);
   text-decoration: underline;

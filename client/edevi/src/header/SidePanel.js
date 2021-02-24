@@ -34,7 +34,7 @@ export default function SidePanel({history, showSidePanel, hideSidePanel}) {
                 </ListItem>
                 ))}
             </List>
-            <Divider />
+            <Divider variant='middle' />
             <List>
                 {['faq', 'GetInTouch'].map((text, index) => (
                 <ListItem button key={text} className='SidePanelListItem' onClick={()=> onButtonClick(text)}>

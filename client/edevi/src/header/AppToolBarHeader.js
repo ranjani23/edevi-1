@@ -9,6 +9,7 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core/styles';
 import SidePanel from './SidePanel';
 import Drawer from '@material-ui/core/Drawer';
+import { useLocation } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     AppToolBar: {
@@ -45,6 +46,9 @@ const toolbarTheme = createMuiTheme({
   });
 
 function AppToolBarHeader (props) {
+    const { pathname } = useLocation();
+    const showHeaderButtons = () => pathname !== '/GetInTouch';
+
     const classes = useStyles();
 
     const setReditectState = (route) => {
@@ -61,14 +65,25 @@ function AppToolBarHeader (props) {
         setShowDrawer(false);
     }
 
-    return(
-        <div> 
-            <AppBar position="static" className={classes.AppToolBar}>
-                <Toolbar>
+    const renderHeaderButtons = ()=> {
+        if(showHeaderButtons()) {
+            return(
+                <>
                     <Button className={classes.toolbarButton} onClick={()=>{setReditectState('Temple')}}>Temple</Button>
                     <Button className={classes.toolbarButton} onClick={()=>{setReditectState('Shop')}}>Shop</Button>
                     <Button className={classes.toolbarButton} onClick={()=>{setReditectState('Donate')}}>Donate</Button>
                     <Button className={classes.toolbarButton} onClick={()=>{setReditectState('About')}}>About</Button>
+                </>
+            )
+        }
+        return null;
+    }
+
+    return(
+        <div> 
+            <AppBar position="static" className={classes.AppToolBar}>
+                <Toolbar>
+                    {renderHeaderButtons()}
                     <IconButton className={classes.hamburgerButton} edge="end" aria-label="menu" style={{marginLeft: 'auto'}} 
                         onClick={showSidePanel}>
                         <MenuIcon />

@@ -2,7 +2,7 @@ export const ShoppingItemsList = {
     itemsList: [
         {
             itemName: 'Temple',
-            itemImg: '../images/shoppingItemPlaceholderImg.png',
+            itemImage: '../images/shoppingItemPlaceholderImg.png',
             itemTitle: 'Temple',
             itemId: 'Temple',
             itemDescription: 'Visit Her Holiness’ abode. \nAarti and darshan daily.',
@@ -80,7 +80,7 @@ export const ShoppingItemsList = {
             
         }, {
             itemName: 'Puja',
-            itemImg: 'shoppingItemPlaceholderImg.png',
+            itemImage: 'shoppingItemPlaceholderImg.png',
             itemTitle: 'Puja',
             itemId: 'Puja',
             itemDescription: 'Seek blessings and guidance as per your needs.',
@@ -169,7 +169,7 @@ export const ShoppingItemsList = {
             }]
         }, {
             itemName: 'Fasting',
-            itemImg: 'shoppingItemPlaceholderImg.png',
+            itemImage: 'shoppingItemPlaceholderImg.png',
             itemTitle: 'Fasting',
             itemId: 'Fasting',
             itemDescription: 'Use an ancient spiritual practice to (re)connect.',
@@ -177,7 +177,7 @@ export const ShoppingItemsList = {
             itemCartView: []
         }, {
             itemName: 'Other',
-            itemImg: 'shoppingItemPlaceholderImg.png',
+            itemImage: 'shoppingItemPlaceholderImg.png',
             itemTitle: 'Other Products',
             itemId: 'Other',
             itemDescription: 'Sacred art to adorn your Internet profiles',
@@ -192,7 +192,7 @@ export const ShoppingItemsList = {
             itemPrice: 'FREE',
             itemFree: true,
             itemDenomination: 'Rupee',
-            itemImage: '',
+            itemImage: 'Walk_in_Darshanan',
             itemDescription: 'The image of HH adorns her abode at all times. The temple is open 24*7. The omnipresent one accepts offerings and blesses all who come in. HH’s manifestation Aarti is daily 9:00 AM/PM IST for 1 hour.',
             itemFeatureList: [{
                 featureName: 'AI story'

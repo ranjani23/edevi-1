@@ -73,7 +73,8 @@ body {
   text-align: center;
   font-size: 32px;
   opacity: 0.8;
-  font-family: 'Lora, Italic';
+  font-family:  var(--italicized-headers);
+  white-space: pre;
 }
 
 .LandingPageModule .EnterTempleButton  {

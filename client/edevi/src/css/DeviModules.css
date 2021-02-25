@@ -3,13 +3,22 @@
 }
 
 .shoppingCartNavigation {
-    display: block;
-    width: 100%;
-    max-width: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+    /* width: 100%;
+    max-width: 400px; */
+}
+
+.ShoppingCartView .shoppingCartNavigation .ShoppingCartIcon {
+    position: initial;
+    margin:0;
 }
 
 .shoppingCartNavigation .shopNavigationBack{
     cursor: pointer;
+    margin-right: 50%;
 }
 
 .BookForAliasGroup label .MuiFormControlLabel-label,
@@ -25,16 +34,41 @@
 
 .QuantityItem .QuantityForm{
     padding: 10px 10px 0px 10px;
+    flex-grow: 1;
+    flex-direction: row;
 }
 
 .QuantityItem .QuantityForm .QuantityControlsForm{
-    margin-left: 120px;
+    /* margin-left: 120px; */
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
 }
 
-.QuantityItem .QuantityForm .quantityText{
+.QuantityItem .QuantityForm .quantityText,
+.QuantityItem .QuantityForm .quantityTextDesc{
     margin-top: 5px;
     color: black;
     font-size: var(--font-size-small);
+}
+
+.QuantityItem .QuantityForm .quantityTextDesc {
+    width: 70%
+}
+
+.ShoppingCartView .ShoppingTileButton {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.ShoppingCartView .ShoppingTileButton button {
+   width: 50%;
+}
+
+.ShoppingCartView .buttonContainer {
+    padding: 0;
 }
 
 .QuantityItem .QuantityForm .QuantityControlsForm .addIcon,
@@ -124,6 +158,13 @@
     justify-content: center;
 }
 
+.ShoppingCartView .ShoppingTileParentLarge {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+} 
+
 .ShoppingModule .MuiGridListTileBar-subtitle {
     white-space: normal;
     color: #0D103B;
@@ -166,7 +207,7 @@
 
 .largeShoppingCartGridListTile,
 .smallShoppingCartGridListTile {
-    padding: 5%;
+    padding: 3%;
 }
 
 .smallShoppingCartGridListTile {
@@ -235,6 +276,13 @@
     border-radius: 0px;
     font-size: var(--font-size-small);
   }
+  .ShoppingCartDetailedTile .MuiCardMedia-img {
+      height: auto;
+  }
+
+  .ShoppingCartDetailedTile .MuiCardContent-root {
+      padding:0;
+  }
 
   .ShoppingCartDetailedTile .cartDetailedTitle ,
   .ShoppingCartDetailedTile .cartPrice {
@@ -283,6 +331,38 @@
   .shoppingCartImg.Walk_in_Darshanan {
       content: url('../images/Walk_in_Darshanan.png')
   }
+
+  .ShoppingTileParentLarge .OnlineLove {
+    content: url('../images/shop/Puja/OnlineLove.png')
+  } 
+
+  .ShoppingTileParentLarge .OnlineScam {
+    content: url('../images/shop/Puja/OnlineScam.png')
+  } 
+
+  .ShoppingTileParentLarge .SmoothConClass {
+    content: url('../images/shop/Puja/SmoothConCls.png')
+  } 
+
+  .ShoppingTileParentLarge .SmoothConnMeeting {
+    content: url('../images/shop/Puja/SmoothConnectionMeeting.png')
+  } 
+
+  .ShoppingTileParentLarge .SmoothConnInterviews {
+    content: url('../images/shop/Puja/SmoothConnInterviews.png')
+  } 
+
+  .ShoppingTileParentLarge .SmoothConnWfh {
+    content: url('../images/shop/Puja/SmoothConnWfh.png')
+  } 
+
+  .ShoppingTileParentLarge .SmoothConnMahaPuja {
+    content: url('../images/shop/Puja/SmoothConnMahaPuja.png')
+  } 
+  
+  .ShoppingTileParentLarge .BoostingDigitalProfile {
+    content: url('../images/shop/Puja/BoostingDigitalProfile.png')
+  } 
   
 
   

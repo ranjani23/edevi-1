@@ -21,7 +21,11 @@ import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormLabel from '@material-ui/core/FormLabel';
-
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import OnlineLove from '../images/shop/Puja/OnlineLove.png';
 
 const useStyles = makeStyles((theme) => ({
     quantityCard: {
@@ -127,11 +131,11 @@ function QuantityTile ({setItemQuantity, quantity}) {
 
         <div className='QuantityItem'>
             <FormGroup className='QuantityForm' row>
-              <FormLabel component="legend" className='quantityText'>Quantity</FormLabel>
+              <FormLabel component="legend" className='quantityTextDesc'>Quantity</FormLabel>
                  <FormGroup row className='QuantityControlsForm'>
-                    <AddCircleOutlineIcon className='addIcon' onClick={increase}/>
-                    <FormLabel component="legend" className='quantityText'>{quantity}</FormLabel>
                     <RemoveCircleOutlineIcon className='removeIcon' onClick={decrease}/>
+                    <FormLabel component="legend" className='quantityText'>{quantity}</FormLabel>
+                    <AddCircleOutlineIcon className='addIcon' onClick={increase}/>
                 </FormGroup>
             </FormGroup>
           
@@ -140,11 +144,11 @@ function QuantityTile ({setItemQuantity, quantity}) {
 }
 
 
-function ShoppingTileButton({showBuyNow, addToCart}) {
+function ShoppingTileButton({showBuyNow, addToCart, buyNow}) {
     return (
-        <div>
+        <div className='ShoppingTileButton'>
             <Button variant='outlined' className={'addToCart'} onClick={addToCart}>Add to cart</Button>
-            {showBuyNow !== false && <Button variant='outlined' className={'buyNow'}>Buy Now</Button>}
+            {showBuyNow !== false && <Button variant='outlined' className={'buyNow'} onClick={buyNow}>Buy Now</Button>}
         </div>
     );
 }
@@ -158,7 +162,7 @@ function ShoppingTileButton({showBuyNow, addToCart}) {
         aliasName: <> // Valid only for Puja Usecases
     }
 */
-function ShoppingTile({shoppingItem, size, showBuyNow, onAddToCart, ActionButton}) {
+function ShoppingTile({shoppingItem, size, showBuyNow, onAddToCart, ActionButton, onBuyNow}) {
     const classes = useStyles();
     let gridClassName = size === 'Large' ? 'largeShoppingCartGridListTile' : 'smallShoppingCartGridListTile';
     const [aliasName, setAliasName] = React.useState('');
@@ -175,11 +179,61 @@ function ShoppingTile({shoppingItem, size, showBuyNow, onAddToCart, ActionButton
         });
         onAddToCart();
     }
+
     const imgClass = shoppingItem.itemImage || '';
     let denomination = shoppingItem.itemPrice === 'FREE' ? '' : "₹ ";
     return (
         <div key={shoppingItem.itemId} className={gridClassName}>
-          <img className={'shoppingCartImg ' + imgClass} src={shoppingPlaceHolderitem} alt={shoppingItem.itemTitle} />
+            <Card className='ShoppingCartDetailedTile'>
+                <CardActionArea>
+                    <CardMedia
+                        component="img"
+                        alt={imgClass}
+                        className={imgClass}
+                        // image={OnlineLove}
+                    />
+                    <CardContent >
+                        <Typography className='cartDetailedTitle'>
+                            {shoppingItem.itemName}
+                            <span className={'cartPrice'}>{denomination + shoppingItem.itemPrice}</span>
+                        </Typography>
+                        <Typography className={'cartDetailedDescription'}>
+                            {shoppingItem.itemDescription}
+                        </Typography>
+                        <div>
+                            {shoppingItem.itemFeatureList &&                          
+                            (
+                                <FeatureListTile shoppingItem={shoppingItem} />
+                            )}
+                            {
+                                shoppingItem.itemRecommendation && (
+                                    <Recommendation shoppingItem={shoppingItem}/>
+                                )
+                            }     
+                            {
+                                shoppingItem.itemBookAlias && (
+                                    <BookAlias setAliasName={setAliasName}/>
+                                )
+                            }                         
+                        </div>
+                        <Divider />
+                        {
+                            shoppingItem.itemPrice !== 'FREE' && shoppingItem.showQuantity!==false &&    
+                            (
+                                <Card className={classes.quantityCard} variant="outlined">
+                                <QuantityTile quantity={quantity} setItemQuantity={setItemQuantity}/>
+                                </Card>
+                            )
+                        }
+                    </CardContent>
+                </CardActionArea>
+                    <CardActions className='buttonContainer'>
+                        {
+                            ActionButton ? <ActionButton /> : <ShoppingTileButton buyNow={onBuyNow} showBuyNow={showBuyNow} addToCart={addToCart}/>
+                        }
+                    </CardActions>
+            </Card>
+            {/* <img className={'shoppingCartImg ' + imgClass} src={shoppingPlaceHolderitem} alt={shoppingItem.itemTitle} />
             <Paper className={'ShoppingCartDetailedTile'}>
             <Typography className={'cartDetailedTitle'}>
                 {shoppingItem.itemName}
@@ -219,7 +273,7 @@ function ShoppingTile({shoppingItem, size, showBuyNow, onAddToCart, ActionButton
                     ActionButton ? <ActionButton /> : <ShoppingTileButton showBuyNow={showBuyNow} addToCart={addToCart}/>
                 }
             </div>
-          </Paper>
+          </Paper> */}
       </div>
     )
     

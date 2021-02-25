@@ -65,13 +65,20 @@
     vertical-align: top;
 }
 
+.ShoppingModule .BodyContext {
+    display: flex;
+    padding: 1rem;
+}
+
 .ShoppingModule .shoppingBackgroundImage {
-    background-image: url('../images/ShoppingBackground_2x.png');
+    background-image: url('../images/shop/ShopBackgroundMed.png');
     background-repeat: no-repeat;
+    background-position: right;
     height: 40vh;
-    width: 300px;
+    /* max-width: 300px; */
     opacity: 0.5;
-    margin-top: 5px;
+    /* margin-top: 5px; */
+    margin: 0;
 }
 
 .ShoppingModule .shoppingGridListTile {
@@ -80,15 +87,24 @@
 
 .ShoppingModule img.TempleShoppingButton {
     content: url('../images/shop/templebutton.svg');
+    margin: 0 0 2% 5%;
+    height: 20px;
 }
 .ShoppingModule img.PujaShoppingButton {
     content: url('../images/shop/pujabutton.svg');
+    margin: 0 0 2% 5%;
+    height: 20px;
+
 }
 .ShoppingModule img.FastingShoppingButton {
     content: url('../images/shop/fastingbutton.svg');
+    margin: 0 0 2% 5%;
+    height: 20px;
 }
-.ShoppingModule img.OtherProductsShoppingButton {
+.ShoppingModule img.OtherShoppingButton {
     content: url('../images/shop/otherbutton.svg');
+    margin: 0 0 2% 5%;
+    height: 20px;
 }
 
 .ShoppingModule .ShoppingModuleDescription {
@@ -101,6 +117,11 @@
     left:0px;
     padding: 5%;
     opacity: 0.8;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    font-size: 2rem;
+    justify-content: center;
 }
 
 .ShoppingModule .MuiGridListTileBar-subtitle {
@@ -133,6 +154,10 @@
 .ShoppingCartView .ShoppingCartIcon:hover {
     background: #F6D11B;
     opacity: 0.6;
+}
+
+.ShoppingModule .MuiGridListTileBar-actionIcon {
+    width: 100%;
 }
 
 .ShoppingCartView .featureGridListTile div {
@@ -251,6 +276,12 @@
     background-image: linear-gradient(263deg, #0A95FB 0%, #2F4FFF 50%, #0A13F8 100%);
     color: white;
     border: none;
+  }
+
+  /* Asset classes*/
+
+  .shoppingCartImg.Walk_in_Darshanan {
+      content: url('../images/Walk_in_Darshanan.png')
   }
   
 

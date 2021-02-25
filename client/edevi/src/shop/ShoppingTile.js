@@ -175,14 +175,15 @@ function ShoppingTile({shoppingItem, size, showBuyNow, onAddToCart, ActionButton
         });
         onAddToCart();
     }
-
+    const imgClass = shoppingItem.itemImage || '';
+    let denomination = shoppingItem.itemPrice === 'FREE' ? '' : "₹ ";
     return (
         <div key={shoppingItem.itemId} className={gridClassName}>
-          <img className={'shoppingCartImg'} src={shoppingPlaceHolderitem} alt={shoppingItem.itemTitle} />
+          <img className={'shoppingCartImg ' + imgClass} src={shoppingPlaceHolderitem} alt={shoppingItem.itemTitle} />
             <Paper className={'ShoppingCartDetailedTile'}>
             <Typography className={'cartDetailedTitle'}>
                 {shoppingItem.itemName}
-                <span className={'cartPrice'}>{"₹ " + shoppingItem.itemPrice}</span>
+                <span className={'cartPrice'}>{denomination + shoppingItem.itemPrice}</span>
             </Typography>
             <Typography className={'cartDetailedDescription'}>
                 {shoppingItem.itemDescription}

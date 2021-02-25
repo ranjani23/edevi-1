@@ -11,5 +11,8 @@
     --font-size-xl: 18px;
     --font-size-medium: 14px;
     --font-size-small: 12px;
-    --shopitem-border-radius: 8px
+    --shopitem-border-radius: 8px;
+    --italicized-headers: 'Lora, Italic';
+    --header-bold-fonts: 'Lora, Bold';
+    --header-medium-fonts: 'Lora, Medium';
 }

@@ -1,0 +1,265 @@
+{
+    "asset": {
+        "generator": "FBX2glTF",
+        "version": "2.0"
+    },
+    "scene": 0,
+    "buffers": [
+        {
+            "byteLength": 255456,
+            "uri": "buffer.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 400,
+            "byteOffset": 0
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1200,
+            "byteOffset": 400
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1600,
+            "byteOffset": 1600
+        },
+        {
+            "buffer": 0,
+            "byteLength": 67200,
+            "byteOffset": 3200,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteLength": 69396,
+            "byteOffset": 70400,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 69396,
+            "byteOffset": 139796,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 46264,
+            "byteOffset": 209192,
+            "target": 34962
+        }
+    ],
+    "scenes": [
+        {
+            "name": "Root Scene",
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "accessors": [
+        {
+            "componentType": 5126,
+            "type": "SCALAR",
+            "count": 100,
+            "bufferView": 0,
+            "byteOffset": 0,
+            "min": [
+                0
+            ],
+            "max": [
+                4.125
+            ]
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 100,
+            "bufferView": 1,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC4",
+            "count": 100,
+            "bufferView": 2,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5123,
+            "type": "SCALAR",
+            "count": 33600,
+            "bufferView": 3,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 5783,
+            "bufferView": 4,
+            "byteOffset": 0,
+            "min": [
+                -0.027303144335747,
+                -0.00072699488373473,
+                -0.027303146198392
+            ],
+            "max": [
+                0.027303144335747,
+                0.0029148068279028,
+                0.027303138747811
+            ]
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 5783,
+            "bufferView": 5,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC2",
+            "count": 5783,
+            "bufferView": 6,
+            "byteOffset": 0
+        }
+    ],
+    "images": [
+        {
+            "name": "Gold Coin.jpg",
+            "uri": "Gold Coin.jpg"
+        }
+    ],
+    "samplers": [
+        {}
+    ],
+    "textures": [
+        {
+            "name": "file2",
+            "sampler": 0,
+            "source": 0
+        }
+    ],
+    "materials": [
+        {
+            "name": "blinn1",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 0,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    0.80000001192093,
+                    0.80000001192093,
+                    0.80000001192093,
+                    1
+                ],
+                "metallicFactor": 0.40000000596046,
+                "roughnessFactor": 0.13487035036087
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Gold_Coin",
+            "primitives": [
+                {
+                    "material": 0,
+                    "mode": 4,
+                    "attributes": {
+                        "NORMAL": 5,
+                        "POSITION": 4,
+                        "TEXCOORD_0": 6
+                    },
+                    "indices": 3
+                }
+            ]
+        }
+    ],
+    "animations": [
+        {
+            "name": "GoldCoin",
+            "channels": [
+                {
+                    "sampler": 0,
+                    "target": {
+                        "node": 1,
+                        "path": "translation"
+                    }
+                },
+                {
+                    "sampler": 1,
+                    "target": {
+                        "node": 1,
+                        "path": "rotation"
+                    }
+                }
+            ],
+            "samplers": [
+                {
+                    "input": 0,
+                    "interpolation": "LINEAR",
+                    "output": 1
+                },
+                {
+                    "input": 0,
+                    "interpolation": "LINEAR",
+                    "output": 2
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "RootNode",
+            "translation": [
+                0,
+                0,
+                0
+            ],
+            "rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ],
+            "children": [
+                1
+            ]
+        },
+        {
+            "name": "Gold_Coin",
+            "translation": [
+                0.0010915459133685,
+                0.027803465723991,
+                0
+            ],
+            "rotation": [
+                0,
+                0,
+                0.70710676908493,
+                0.70710676908493
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ],
+            "mesh": 0
+        }
+    ]
+}

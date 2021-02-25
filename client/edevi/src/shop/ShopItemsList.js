@@ -85,26 +85,32 @@ export const ShoppingItemsList = {
             itemId: 'Puja',
             itemDescription: 'Seek blessings and guidance as per your needs.',
             buttonColor: 'green',
+            itemInstructions: [
+                'Devotees may purchase puja packages* as per their needs and desires. After payment pujas will be performed by First Disciple Glitch as per proper ritual. e-prasad (propitiatory offering shared as blessing) will be sent to the registered email id/virtual address of the devotees on successful conclusion.',
+            ],
+            itemDisclaimer: '*Pujas once paid for cannot be cancelled. There is no refund in the realm of divinity and faith.',
             itemCartView: [{
                 itemType: 'cartItem',
                 itemId: 'onlineLove',
                 itemName: 'Successful Online Love',
                 itemPrice: '250',
                 itemDenomination: 'Rupee',
-                itemImage: '',
+                itemImage: 'OnlineLove',
                 itemDescription: 'Seek blessings for your virtual romance and hope for a happily ever after.',
                 itemRecommendation: 'Recommended for all',
-                itemBookAlias: true
+                itemBookAlias: true,
+                showQuantity: false
             }, {
                 itemType: 'cartItem',
                 itemId: 'onlineScamProtection',
                 itemName: 'Online Scam Protection',
                 itemPrice: '250',
                 itemDenomination: 'Rupee',
-                itemImage: '',
+                itemImage: 'OnlineScam',
                 itemDescription: 'Pray for guidance in navigating the Internet safely and to safeguard your data and finances.',
                 itemRecommendation: 'Recommended especially for protection of elderly and children.',
-                itemBookAlias: true
+                itemBookAlias: true,
+                showQuantity: false
 
             },{
                 itemType: 'cartItem',
@@ -112,60 +118,66 @@ export const ShoppingItemsList = {
                 itemName: 'Smooth Connection - Interviews',
                 itemPrice: '225',
                 itemDenomination: 'Rupee',
-                itemImage: '',
+                itemImage: 'SmoothConnInterviews',
                 itemDescription: 'Secure some divine influence so that your screen doesn’t freeze during online interviews.',
                 itemRecommendation: 'Recommended for youth.',
-                itemBookAlias: true
+                itemBookAlias: true,
+                showQuantity: false
             },{
                 itemType: 'cartItem',
                 itemId: 'smoothConnectionMeetings',
                 itemName: 'Smooth Connection - Meetings',
                 itemPrice: '225',
                 itemDenomination: 'Rupee',
-                itemImage: '',
+                itemImage: 'SmoothConnMeeting',
                 itemDescription: 'Secure some divine influence so that your screen doesn’t freeze during urgent/important client meetings.',
                 itemRecommendation: 'Recommended for corporate professionals and teachers.',
-                itemBookAlias: true
+                itemBookAlias: true,
+                showQuantity: false
             },{
                 itemType: 'cartItem',
                 itemId: 'smoothConnectionwfh',
                 itemName: 'Smooth Connection - Work From Home',
                 itemPrice: '225',
                 itemDenomination: 'Rupee',
-                itemImage: '',
+                itemImage: 'SmoothConnWfh',
                 itemDescription: 'Secure some divine influence so that your screen doesn’t freeze during urgent/important work sessions.',
                 itemRecommendation: 'Recommended for corporate professionals, teachers, artists, doctors, free-lancers, consultants.',
-                itemBookAlias: true
+                itemBookAlias: true,
+                showQuantity: false
             },{
                 itemType: 'cartItem',
                 itemId: 'smoothConnectionclasses',
                 itemName: 'Smooth Connection - Classes',
                 itemPrice: '225',
                 itemDenomination: 'Rupee',
-                itemImage: '',
+                itemImage: 'SmoothConClass',
                 itemDescription: 'Secure some divine influence so that your screen doesn’t freeze during exams, presentations, and sessions.',
                 itemRecommendation: 'Recommended for students of all age groups.',
-                itemBookAlias: true
+                itemBookAlias: true,
+                showQuantity: false
             },{
                 itemType: 'cartItem',
                 itemId: 'smoothConnectionMahaPuja',
                 itemName: 'Smooth Connection - Maha Puja',
                 itemPrice: '625',
                 itemDenomination: 'Rupee',
-                itemImage: '',
+                itemImage: 'SmoothConnMahaPuja',
                 itemDescription: 'Secure some divine influence so that your screen doesn’t freeze during interviews, meetings, work from home and classes with a discount. \n4 puja benefits in 1!',
                 itemRecommendation: 'Recommended for families.',
-                itemBookAlias: true
+                itemBookAlias: true,
+                showQuantity: false
             },{
                 itemType: 'cartItem',
                 itemId: 'boostingDigitalProfile',
                 itemName: 'Boosting Digital Profile',
                 itemPrice: '1250',
                 itemDenomination: 'Rupee',
-                itemImage: '',
+                itemImage: 'BoostingDigitalProfile',
                 itemDescription: 'Pray for HH’s divine blessings in enhancing your virtual presence. May likes, shares, and impactful engagement be yours!',
                 itemRecommendation: 'Recommended for artists, sportspersons, chefs, influencers, digital creators, entrepreneurs.',
-                itemBookAlias: true
+                itemBookAlias: true,
+                showQuantity: false
             }]
         }, {
             itemName: 'Fasting',

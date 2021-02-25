@@ -145,13 +145,17 @@ function ShoppingCartView(props) {
      forceRefresh(refresh+1);
   }
 
+  const onBuyNow = () => {
+    props.history.replace('/shop/Checkout');
+  }
+
   const subOfferingsItem = getSubOfferingsItem();
 
   return (
     <div className="ShoppingCartView">
       <div className={classes.shoppingCartGridList}>
         <div className={"shoppingCartNavigation"}>
-          <span className={"shopNavigationBack"} onClick={handleBackClick}>
+          <nav className={"shopNavigationBack"} onClick={handleBackClick}>
             <ArrowBackIcon
               color={"primary"}
               fontSize={"large"}
@@ -162,9 +166,9 @@ function ShoppingCartView(props) {
               component="h5"
               className={"NavigationText"}
             >
-              {previousItemView}
+              {currentItemView}
             </Typography>
-          </span>
+          </nav>
           <ShoppingCartBadge
             itemCount={ShoppingCartUtils.getCartQuantity()}
             history={props.history}
@@ -174,11 +178,12 @@ function ShoppingCartView(props) {
         </div>
         <grid className={classes.shoppingCartGList} cols={1}>
           {currentDetailedItemView.itemCartView.map((shoppingItem) => (
-            <div>
+            <div className='ShoppingTileParentLarge'>
               <ShoppingTile
                 shoppingItem={shoppingItem}
                 size={"Large"}
                 onAddToCart={onAddToCart}
+                onBuyNow={onBuyNow}
               />
             </div>
           ))}

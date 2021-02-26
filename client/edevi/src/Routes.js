@@ -10,7 +10,9 @@ import GlitchScreen from './temple/GlitchScreen';
 import Faq from './faq/Faq';
 import PledgeScreen from './temple/PledgeScreen';
 import CardDeck from './DeckOfCards/CardDeck';
-import GetInTouch from './getInTouch/GetInTouch'
+import GetInTouch from './getInTouch/GetInTouch';
+import TermsAndConditions from './about/TermsAndConditions';
+
 
 class Routes extends Component {
 
@@ -39,6 +41,7 @@ class Routes extends Component {
 
                     <Route exact path='/donate' component={DonateModule}/>
                     <Route exact path='/about' component={AboutModule}/>
+                    <Route exact path='/about/TermsAndConditions' component={TermsAndConditions}/>
                     <Route exact path='/faq' component={Faq}/>
                     <Route exact path='/GetInTouch' component={GetInTouch}/>
 

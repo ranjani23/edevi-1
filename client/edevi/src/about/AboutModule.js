@@ -7,8 +7,14 @@ import supportedBy from '../images/SupportedBy.png';
 import featureListBullet from '../images/featureDiamond.svg';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
+import ServerConstants from '../enums/ServerConstants';
 
 function PledgePrompt () {
+
+  function redirectToAsset(assetName) {
+
+  }
+
   return (
     <div className='PledgePrompt'>
         <div className='recommendation'>We recommend you to take the Media literacy pledge first</div>
@@ -102,7 +108,7 @@ function AboutModule() {
           <div className='createdByTitle'>License protection</div>
           <div>© 2021 Anandana Kapur.  All rights reserved </div>
         </div>
-        <a href ='' className='Terms'>Terms and Conditions</a>    
+        <a href ={'/About/TermsAndConditions'} className='Terms'>Terms and Conditions</a>    
     </div>
   );
 }

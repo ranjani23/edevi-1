@@ -123,3 +123,25 @@
     font-size: var(--font-size-small);
     font-weight: bold;
 }
+
+.TermsAndConditions {
+    margin: 16px;
+    color: #ececf0;
+}
+
+.TermsAndConditions .TermsTitle {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Lora,Regular'
+}
+
+.TermsAndConditions .moduleSection {
+    font-size: 14px;
+    font-family: 'Lora,Regular';
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.08);
+    margin: 2%;
+    padding: 2%;
+    box-sizing: border-box;
+    cursor: pointer;
+}

@@ -357,7 +357,7 @@
     content: url('../images/shop/Temple/SharingAbundance.png')
   } 
 
-  .shoppingCartImg.Walk_in_Darshanan {
+  .largeShoppingCartGridListTile .Walk_in_Darshanan {
       content: url('../images/Walk_in_Darshanan.png')
   }
 
@@ -434,16 +434,16 @@
       margin: 5px !important;
   }
 
- .ShoppingCartView .Fasting .featureGridListTile .featureName{
+  .Fasting .featureGridListTile .featureName{
     width: calc(100% - 20px);
     display: inline;
 }
 
-.ShoppingCartView .Fasting .featureGridListTile div {
+ .Fasting .featureGridListTile div {
     float: none;
 }
 
- .ShoppingCartView .featureGridListTile .featureName{
+  .featureGridListTile .featureName{
     font-size: var(--font-size-small);
     vertical-align: top;
     margin-top: 2px;
@@ -452,11 +452,11 @@
     display: inline;
 }
 
-.ShoppingCartView .Fasting .featureGridListTile .MuiGridListTile-tile{
+ .Fasting .featureGridListTile .MuiGridListTile-tile{
     display: flex;
 }
 
-.ShoppingCartView .featureGridListTile img{
+ .featureGridListTile img{
     float: left;
 }
 
@@ -491,6 +491,27 @@
 .itemPreface .itemDisclaimer {
     font-weight: bold;
 }
+
+.TempRedirect {
+    font-family: 'Lora, Regular';
+    color: #ececf0;
+    margin: 3%;
+    font-size: var(--font-size-small);
+    white-space: break-words;
+}
+
+.TempRedirect .title {
+    font-size: var(--font-size-large);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.TempRedirect .BankDetails {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 2%;
+    margin-top: 10px;
+}
+
 
 
 

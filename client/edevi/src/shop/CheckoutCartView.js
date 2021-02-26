@@ -60,7 +60,7 @@ function TotalBottomBar() {
     )
 }
 
-function LoadedCartView ({setCurrentView, setMessage}) {
+function LoadedCartView ({setCurrentView, setMessage, history}) {
   const classes = useStyles();
   const [loading, setLoading] = useState(false);
   const [inputForm, setInputForm] = useState(defaultInputForm);
@@ -81,6 +81,7 @@ function LoadedCartView ({setCurrentView, setMessage}) {
   const handleSubmit = async () => {
     setLoading(true);
     setMessage(null);
+    
     try {
       let itemDetails = ShoppingCartUtils.getLocalStorageItems();
       let totalAmount = ShoppingCartUtils.getCartPrice();
@@ -118,6 +119,11 @@ function LoadedCartView ({setCurrentView, setMessage}) {
     }
   };
 
+  // Redirect temporarily until razorpay is up
+  const tempRedirect = () => {
+    history.push('/TempRedirect');
+  }
+
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://checkout.razorpay.com/v1/checkout.js';
@@ -133,7 +139,7 @@ function LoadedCartView ({setCurrentView, setMessage}) {
                 ))
             }
             <TotalBottomBar />
-            <Button variant='outlined' className={'proceedToBuy'} onClick={()=>{handleSubmit()}}>Proceed to Buy</Button>
+            <Button variant='outlined' className={'proceedToBuy'} onClick={()=>{tempRedirect()}}>Proceed to Buy</Button>
         </div>
     )
 }
@@ -173,7 +179,7 @@ function CheckoutCartView(props) {
                     } 
                     {
                     itemQuantity > 0 && (
-                        <LoadedCartView setCurrentView={setCurrentView} setMessage={setMessage}/>
+                        <LoadedCartView setCurrentView={setCurrentView} setMessage={setMessage} history={props.history}/>
                     ) 
                     } </span>   
                 </span>

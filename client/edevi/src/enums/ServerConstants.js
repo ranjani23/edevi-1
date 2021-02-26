@@ -3,7 +3,7 @@ const urlBase = 'https://fast-shore-71647.herokuapp.com/';
 const clientUrlBase = 'localhost:3000';
 
 const serverConstants = {
-    clientUrlBase: clientUrlBase,
+    clientUrlBase: 'localhost:3000',
     orderIdFetch: urlBase + '/api/razorpay',
     paymentCodeVerification: urlBase + '/api/codeverification'
 };

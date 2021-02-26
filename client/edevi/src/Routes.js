@@ -10,7 +10,11 @@ import GlitchScreen from './temple/GlitchScreen';
 import Faq from './faq/Faq';
 import PledgeScreen from './temple/PledgeScreen';
 import CardDeck from './DeckOfCards/CardDeck';
-import GetInTouch from './getInTouch/GetInTouch'
+import GetInTouch from './getInTouch/GetInTouch';
+import TermsAndConditions from './about/TermsAndConditions';
+import ARScreen from './temple/ARScreen';
+import TemporaryPaymentView from './shop/TemporaryPaymentView';
+
 
 class Routes extends Component {
 
@@ -25,11 +29,13 @@ class Routes extends Component {
         return (
                 <Switch>
                     <Route exact path='/' component={LandingPageModule}/>
+                    <Route exact path='/TempRedirect' component={TemporaryPaymentView}/>
                     <Route exact path='/Glitch' component={GlitchScreen}/>
                     <Route exact path='/DeckOfCards' component={CardDeck}/>
                     <Route exact path='/Glitch/Pledge' component={PledgeScreen}/>
                     <Route exact path='/temple' component={LandingPageModule}/>
                     <Route exact path='/temple/Glitch' component={GlitchScreen}/>
+                    <Route exact path='/Glitch/Pledge/ARScreen' component={ARScreen}/>
                     <Route exact path='/shop' component={ShoppingModule}/>
                     <Route exact path='/shop/Checkout' component={CheckoutCartView}/>
                     <Route exact path='/shop/Temple' component={ShoppingCartView}/>
@@ -39,6 +45,7 @@ class Routes extends Component {
 
                     <Route exact path='/donate' component={DonateModule}/>
                     <Route exact path='/about' component={AboutModule}/>
+                    <Route exact path='/about/TermsAndConditions' component={TermsAndConditions}/>
                     <Route exact path='/faq' component={Faq}/>
                     <Route exact path='/GetInTouch' component={GetInTouch}/>
 

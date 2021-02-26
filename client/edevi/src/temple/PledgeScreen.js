@@ -2,10 +2,10 @@
 import Button from '@material-ui/core/Button';
 
 
-export default function PledgeScreen() {
+export default function PledgeScreen(props) {
 
     const StartPledge = () => {
-        
+        props.history.push('/Glitch/Pledge/ARScreen');
     }
     return(
         <div className='PledgeScreen' >

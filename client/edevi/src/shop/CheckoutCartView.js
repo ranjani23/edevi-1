@@ -153,7 +153,7 @@ function CheckoutCartView(props) {
     let locationSegments = props.location.pathname.split('/');
     const currentItemView = locationSegments.pop();
     const previousItemView = locationSegments[locationSegments.length - 1];
-    let itemQuantity = 1;
+    let itemQuantity = ShoppingCartUtils.getCartQuantity();
     const [message, setMessage] = useState(null);
     if (message) {
         // Need to clear the shopping cart here

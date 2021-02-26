@@ -13,6 +13,7 @@ import CardDeck from './DeckOfCards/CardDeck';
 import GetInTouch from './getInTouch/GetInTouch';
 import TermsAndConditions from './about/TermsAndConditions';
 import ARScreen from './temple/ARScreen';
+import TemporaryPaymentView from './shop/TemporaryPaymentView';
 
 
 class Routes extends Component {
@@ -28,6 +29,7 @@ class Routes extends Component {
         return (
                 <Switch>
                     <Route exact path='/' component={LandingPageModule}/>
+                    <Route exact path='/TempRedirect' component={TemporaryPaymentView}/>
                     <Route exact path='/Glitch' component={GlitchScreen}/>
                     <Route exact path='/DeckOfCards' component={CardDeck}/>
                     <Route exact path='/Glitch/Pledge' component={PledgeScreen}/>

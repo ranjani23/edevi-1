@@ -492,6 +492,27 @@
     font-weight: bold;
 }
 
+.TempRedirect {
+    font-family: 'Lora, Regular';
+    color: #ececf0;
+    margin: 3%;
+    font-size: var(--font-size-small);
+    white-space: break-words;
+}
+
+.TempRedirect .title {
+    font-size: var(--font-size-large);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.TempRedirect .BankDetails {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 2%;
+    margin-top: 10px;
+}
+
+
 
 
   

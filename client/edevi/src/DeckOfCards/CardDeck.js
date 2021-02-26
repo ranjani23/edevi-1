@@ -9,7 +9,6 @@ const deckLimit = 21;
 
 function fetchRandomDeckInfo() {
     const randomDeckNum = Math.floor(Math.random() * deckLimit) + 1;
-    console.log(randomDeckNum);
     return FullDeck['deck' + randomDeckNum];
 }
 let randomCardDeck = fetchRandomDeckInfo();
@@ -30,7 +29,6 @@ export default function CardDeck() {
 
     const [currentCardIndex, setCurrentCardIndex] = React.useState(0);
     const currentCard = randomCardDeck[currentCardIndex];
-    console.log(currentCardIndex);
     let currentCardImage = currentCard.image;
     let hasVideo = currentCardImage.indexOf('.mp4') > -1;
     let videSrc = '';

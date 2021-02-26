@@ -51,35 +51,29 @@ const useStyles = makeStyles((theme) => ({
     },
     addIcon: {
       marginRight: '50px'
-    },
-    featureRecommendation: {
-      fontWeight: 'bold',
-      fontSize: 'var(--font-size-small);',
-      textAlign: 'left'
     }
-  
   }));
 
 function Recommendation({shoppingItem}) {
     const classes = useStyles();
 
     return (
-        <Typography variant="body1" className={classes.featureRecommendation} >
+        <Typography variant="body1" className={'featureRecommendation'} >
             {shoppingItem.itemRecommendation}
         </Typography> 
     )
 }
 
 
-function FeatureListTile({shoppingItem}) {
+function FeatureListTile({shoppingItem, cols}) {
     const classes = useStyles();
     return (
-      <GridList cellHeight={'auto'} className={'cartFeatureList'} cols={2} >
+      <GridList cellHeight={'auto'} className={'cartFeatureList'} cols={cols} >
       {
           shoppingItem.itemFeatureList.map((feaureItem)=> (
           <GridListTile className='featureGridListTile' key={feaureItem.featureName}>
               <img className={classes.featureImage} src={featureListBullet}/>
-              <span className={classes.featureName}>{feaureItem.featureName}</span>
+              <div className={'featureName'}>{feaureItem.featureName}</div>
           </GridListTile>
           ))
       }
@@ -182,9 +176,10 @@ function ShoppingTile({shoppingItem, size, showBuyNow, onAddToCart, ActionButton
 
     const imgClass = shoppingItem.itemImage || '';
     let denomination = shoppingItem.itemPrice === 'FREE' ? '' : "₹ ";
+    const featureCols = shoppingItem.featureCols || 2;
     return (
         <div key={shoppingItem.itemId} className={gridClassName}>
-            <Card className='ShoppingCartDetailedTile'>
+            <Card className={'ShoppingCartDetailedTile '}>
                 <CardActionArea>
                     <CardMedia
                         component="img"
@@ -203,7 +198,7 @@ function ShoppingTile({shoppingItem, size, showBuyNow, onAddToCart, ActionButton
                         <div>
                             {shoppingItem.itemFeatureList &&                          
                             (
-                                <FeatureListTile shoppingItem={shoppingItem} />
+                                <FeatureListTile shoppingItem={shoppingItem} cols={featureCols}/>
                             )}
                             {
                                 shoppingItem.itemRecommendation && (

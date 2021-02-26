@@ -176,7 +176,7 @@ function ShoppingCartView(props) {
             onClick={handleCheckoutClick}
           />
         </div>
-        <grid className={classes.shoppingCartGList} cols={1}>
+        <grid className={'ShoppingCartGList ' + currentDetailedItemView.itemName} cols={1}>
           {currentDetailedItemView.itemCartView.map((shoppingItem) => (
             <div className='ShoppingTileParentLarge'>
               <ShoppingTile

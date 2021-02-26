@@ -15,8 +15,9 @@ function fetchRandomDeckInfo() {
 let randomCardDeck = fetchRandomDeckInfo();
 let cardPrecursor = {
     "id": 0,
-    "image": "GuideIcon.png",
-    "bg-color": "#000000"
+    "image": "Guideicon.png",
+    "bg-color": "#000000",
+    'opacity': 0.8
   }
   let cardSuccessor = {
       id: randomCardDeck.length+1,
@@ -29,15 +30,24 @@ export default function CardDeck() {
 
     const [currentCardIndex, setCurrentCardIndex] = React.useState(0);
     const currentCard = randomCardDeck[currentCardIndex];
-    const backgroundImage =  currentCard.image ? `../images/Image_Stories/${currentCard.image}`: 
+    console.log(currentCardIndex);
+    let currentCardImage = currentCard.image;
+    let hasVideo = currentCardImage.indexOf('.mp4') > -1;
+    let videSrc = '';
+    const backgroundImage =  currentCardImage ? `../images/Image_Stories/${currentCard.image}`: 
     `../images/Image_Stories/DeckOfCardsBg.png`; 
+
     let styles = {
         backgroundImage: currentCard.image? "url('http://" + serverConstants.clientUrlBase + "/Images_Stories/" +  currentCard.image + "')": 
         "url('http://" + serverConstants.clientUrlBase + "/Images_Stories/DeckOfCardsBg.png')",
         // color: currentCard['bg-color'] || '#FFFFFF', 
-        backgroundColor: currentCard['bg-color'] ? currentCard['bg-color'] : 'transparent'
+        backgroundColor: currentCard['bg-color'] ? currentCard['bg-color'] : 'transparent',
+        opacity: currentCard.opacity || 1
     }
 
+    if (hasVideo) {
+        styles.videoSource =   'http://' + serverConstants.clientUrlBase + '/Images_Stories/' + currentCard.image;
+    }
     let incr = function () {
         if (currentCardIndex+1 <randomCardDeck.length) {
             setCurrentCardIndex(currentCardIndex + 1)
@@ -50,6 +60,14 @@ export default function CardDeck() {
                 {currentCard.Text && 
                 (<div className={'TextContent '}><pre> {currentCard.Text}</pre>
                 </div>)}
+
+                {
+                    hasVideo && (
+                        <video controls>
+                            <source src={styles.videoSource} type="video/mp4" />
+                        </video>
+                    )
+                }
             </div>            
         </div>
     )

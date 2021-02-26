@@ -22,10 +22,10 @@ function CodeForm({onEnterCodeClick}) {
 
 export default function GlitchScreen(props) {
     const onWalkInClick = () => {
-
+        props.history.push('/Glitch/Pledge');
     }
      
-    function WalkInDarshanButton({onWalkInClick}) {
+    function WalkInDarshanButton() {
         return (
             <Button className={'WalkInDarshanButton'} onClick={onWalkInClick}> Enter </Button>
         );

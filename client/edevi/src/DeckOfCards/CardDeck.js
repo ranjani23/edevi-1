@@ -25,7 +25,7 @@ let cardPrecursor = {
 randomCardDeck.unshift(cardPrecursor);
 randomCardDeck.push(cardSuccessor);
 
-export default function CardDeck() {
+export default function CardDeck(props) {
 
     const [currentCardIndex, setCurrentCardIndex] = React.useState(0);
     const currentCard = randomCardDeck[currentCardIndex];
@@ -49,6 +49,8 @@ export default function CardDeck() {
     let incr = function () {
         if (currentCardIndex+1 <randomCardDeck.length) {
             setCurrentCardIndex(currentCardIndex + 1)
+        } else {
+            props.history.push('/DeckOfCards/DeviAr');
         }
     };
 

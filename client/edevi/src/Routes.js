@@ -14,6 +14,8 @@ import GetInTouch from './getInTouch/GetInTouch';
 import TermsAndConditions from './about/TermsAndConditions';
 import ARScreen from './temple/ARScreen';
 import TemporaryPaymentView from './shop/TemporaryPaymentView';
+import KavadScreen from './temple/KavadScreen';
+import DeviArScreen from './temple/DeviArScreen';
 
 
 class Routes extends Component {
@@ -32,10 +34,12 @@ class Routes extends Component {
                     <Route exact path='/TempRedirect' component={TemporaryPaymentView}/>
                     <Route exact path='/Glitch' component={GlitchScreen}/>
                     <Route exact path='/DeckOfCards' component={CardDeck}/>
+                    <Route exact path='/DeckOfCards/DeviAr' component={DeviArScreen}/>
                     <Route exact path='/Glitch/Pledge' component={PledgeScreen}/>
                     <Route exact path='/temple' component={LandingPageModule}/>
                     <Route exact path='/temple/Glitch' component={GlitchScreen}/>
-                    <Route exact path='/Glitch/Pledge/ARScreen' component={ARScreen}/>
+                    <Route exact path='/Glitch/Pledge/ARScreen' component={ARScreen}/>                   
+                     <Route exact path='/Glitch/Pledge/ARScreen/KavadScreen' component={KavadScreen}/>
                     <Route exact path='/shop' component={ShoppingModule}/>
                     <Route exact path='/shop/Checkout' component={CheckoutCartView}/>
                     <Route exact path='/shop/Temple' component={ShoppingCartView}/>

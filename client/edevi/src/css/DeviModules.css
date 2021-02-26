@@ -328,6 +328,35 @@
 
   /* Asset classes*/
 
+
+  .ShoppingTileParentLarge .MahaDarshanPaid {
+    content: url('../images/shop/Temple/TempleMahaDarshan.png')
+  } 
+
+  .ShoppingCartDetailedTile .SparklingHope {
+    content: url('../images/shop/Temple/SparklingHope.png')
+  } 
+
+  .ShoppingCartDetailedTile .OfferingGratitude {
+    content: url('../images/shop/Temple/OfferingGratitude.png')
+  }   
+  
+  .ShoppingCartDetailedTile .CelebratingChange {
+    content: url('../images/shop/Temple/CelebratingChange.png')
+  }   
+  
+  .ShoppingCartDetailedTile .sharingAbundanceGold {
+    content: url('../images/shop/Temple/SharingAbundance.png')
+  } 
+
+  .ShoppingCartDetailedTile .SharingAbundanceSilver {
+    content: url('../images/shop/Temple/SharingAbundance.png')
+  } 
+
+  .ShoppingCartDetailedTile .SharingAbundanceBronze {
+    content: url('../images/shop/Temple/SharingAbundance.png')
+  } 
+
   .shoppingCartImg.Walk_in_Darshanan {
       content: url('../images/Walk_in_Darshanan.png')
   }
@@ -363,6 +392,106 @@
   .ShoppingTileParentLarge .BoostingDigitalProfile {
     content: url('../images/shop/Puja/BoostingDigitalProfile.png')
   } 
+
+  .ShoppingTileParentLarge .twentyFiveBy25 {
+    content: url('../images/shop/Fasting/25by25.png')
+  }
   
+  .ShoppingTileParentLarge .WeekendRite {
+    content: url('../images/shop/Fasting/weekendrite.png')
+  }
+  
+  .ShoppingTileParentLarge .SpareALike {
+    content: url('../images/shop/Fasting/facebookLike.png')
+  }
+  
+  .ShoppingTileParentLarge .TwoSips {
+    content: url('../images/shop/Fasting/2sips.png')
+  }
+  
+  .ShoppingTileParentLarge .three80Choices {
+    content: url('../images/shop/Fasting/380choices.png')
+  }
+
+  .ShoppingTileParentLarge .Devotee {
+    content: url('../images/shop/Other/Devotee.png')
+  }
+
+  .ShoppingTileParentLarge .Guidance {
+    content: url('../images/shop/Other/Guidance.png')
+  }
+
+  .ShoppingTileParentLarge .Value {
+    content: url('../images/shop/Other/Value.png')
+  }
+
+  .ShoppingTileParentLarge .HolyShrine {
+    content: url('../images/shop/Other/HolyShrine.png')
+  }
+
+  .Fasting .ShoppingTileParentLarge .cartFeatureList {
+      flex-direction: row;
+      margin: 5px !important;
+  }
+
+ .ShoppingCartView .Fasting .featureGridListTile .featureName{
+    width: calc(100% - 20px);
+    display: inline;
+}
+
+.ShoppingCartView .Fasting .featureGridListTile div {
+    float: none;
+}
+
+ .ShoppingCartView .featureGridListTile .featureName{
+    font-size: var(--font-size-small);
+    vertical-align: top;
+    margin-top: 2px;
+    box-sizing: border-box;
+    margin-left: 5px;
+    display: inline;
+}
+
+.ShoppingCartView .Fasting .featureGridListTile .MuiGridListTile-tile{
+    display: flex;
+}
+
+.ShoppingCartView .featureGridListTile img{
+    float: left;
+}
+
+.Fasting .ShoppingCartDetailedTile .cartDetailedDescription {
+    font-weight: bold;
+    font-size: var(--font-size-small);
+}
+
+.ShoppingCartDetailedTile .featureRecommendation {
+    font-weight: bold;
+    font-size: var(--font-size-small);
+    text-align: left;
+}
+
+.Fasting .ShoppingCartDetailedTile .featureRecommendation {
+    font-weight: normal;
+}
+
+.itemPreface .itemInstructions,
+.itemPreface .itemDisclaimer {
+    color: white;
+    background-color: var(--header-toolbar-color);
+    font-size: var(--font-size-medium);
+    font-family: 'OpenSans';
+    margin: 20px;
+    padding: 10px;
+    opacity: 0.9;
+    font-weight: normal;
+    white-space: break-spaces;
+}
+
+.itemPreface .itemDisclaimer {
+    font-weight: bold;
+}
+
+
 
   

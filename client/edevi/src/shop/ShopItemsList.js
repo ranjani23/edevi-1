@@ -85,9 +85,7 @@ export const ShoppingItemsList = {
             itemId: 'Puja',
             itemDescription: 'Seek blessings and guidance as per your needs.',
             buttonColor: 'green',
-            itemInstructions: [
-                'Devotees may purchase puja packages* as per their needs and desires. After payment pujas will be performed by First Disciple Glitch as per proper ritual. e-prasad (propitiatory offering shared as blessing) will be sent to the registered email id/virtual address of the devotees on successful conclusion.',
-            ],
+            itemInstructions: 'Devotees may purchase puja packages* as per their needs and desires. After payment pujas will be performed by First Disciple Glitch as per proper ritual. e-prasad (propitiatory offering shared as blessing) will be sent to the registered email id/virtual address of the devotees on successful conclusion.',
             itemDisclaimer: '*Pujas once paid for cannot be cancelled. There is no refund in the realm of divinity and faith.',
             itemCartView: [{
                 itemType: 'cartItem',
@@ -186,6 +184,8 @@ export const ShoppingItemsList = {
             itemId: 'Fasting',
             itemDescription: 'Use an ancient spiritual practice to (re)connect.',
             buttonColor: 'yellow',
+            itemInstructions: 'Her Holiness eDevi recommends a pleasant and harmonious flow of energy between the virtual and real. It is highly preferred that devotees practice #DigiFasting to reboot the self, the spirit, and their systems. Fasting in the name of HH eDevi is also a mark of devotion. \n\n HH does not want her devotees to suffer but to use this ancient spiritual practice to contemplate gratitude for the convenience(s) brought in by the Internet in the 21st century. By regulating time spent online #DigiFasting helps develop self-control and increases willpower. We also find a moment to unplug from the virtual world and connect to the complex cosmos within. \n\n HH eDevi has ordained the following fasts for the physical and spiritual wellbeing of humankind. Devotees can find attunement with the Goddess of the Internet by practicing these. \n\n Please note: #DigiFasting is always more effective when it is accompanied by e-daan i.e. donations to help bridge the digital divide. Devotees are advised to increase the power of prayer by sharing with the underserved.',
+            itemInstructionsCollapse: true,
             itemCartView: [{
                 itemType: 'cartItem',
                 itemId: '25By25',
@@ -304,7 +304,44 @@ export const ShoppingItemsList = {
             itemId: 'Other',
             itemDescription: 'Sacred art to adorn your Internet profiles',
             buttonColor: 'yellow',
-            itemCartView: []
+            itemInstructions: 'Digital art offers a simple and beautiful way to stay connected with the divine.',
+            itemCartView: [{
+                itemType: 'cartItem',
+                itemId: 'Devotee',
+                itemName: 'Devotee',
+                itemPrice: '200',
+                itemDenomination: 'Rupee',
+                itemImage: 'Devotee',
+                itemDescription: 'First Disciple Glitch is a direct channel to the divine. True to his nature, his image too guards you online. \n\n Receive divine direction by sharing this image with loved ones digitally.',
+                itemBookAlias: false
+            }, {
+                itemType: 'cartItem',
+                itemId: 'Guidance',
+                itemName: 'Guidance',
+                itemPrice: '150',
+                itemDenomination: 'Rupee',
+                itemImage: 'Guidance',
+                itemDescription: 'A must-have, HH eDevi’s wise words will generate spiritual vibrations that will keep bad influences away. \n\n Add this to your digital altar i.e. social media profile for richness in life and beauty.',
+                itemBookAlias: false
+            },{
+                itemType: 'cartItem',
+                itemId: 'Value',
+                itemName: 'Value',
+                itemPrice: '200',
+                itemDenomination: 'Value',
+                itemImage: 'Value',
+                itemDescription: 'Of the values of digital-life ‘privacy’ is most sacred. Devotees who adopt and share this policy will find peace and liberation. \n\n Practice this tenet of HH eDevi by sharing this online or keeping it on your device(s).',
+                itemBookAlias: false
+            },{
+                itemType: 'cartItem',
+                itemId: 'HolyShrine',
+                itemName: 'Holy Shrine',
+                itemPrice: '250',
+                itemDenomination: 'Rupee',
+                itemImage: 'HolyShrine',
+                itemDescription: 'eDevi Temple is the principal shrine of the Goddess of the Internet. \n\n The intricate panels depict digital lives of human beings and the ever faithful First Disciple Glitch Invoke the blessings of HH eDevi by downloading this on your phone, desktop, or TV.',
+                itemBookAlias: false
+            }]
         }
     ],
     freeItems:[{

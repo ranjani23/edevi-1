@@ -413,6 +413,22 @@
     content: url('../images/shop/Fasting/380choices.png')
   }
 
+  .ShoppingTileParentLarge .Devotee {
+    content: url('../images/shop/Other/Devotee.png')
+  }
+
+  .ShoppingTileParentLarge .Guidance {
+    content: url('../images/shop/Other/Guidance.png')
+  }
+
+  .ShoppingTileParentLarge .Value {
+    content: url('../images/shop/Other/Value.png')
+  }
+
+  .ShoppingTileParentLarge .HolyShrine {
+    content: url('../images/shop/Other/HolyShrine.png')
+  }
+
   .Fasting .ShoppingTileParentLarge .cartFeatureList {
       flex-direction: row;
       margin: 5px !important;
@@ -458,5 +474,24 @@
 .Fasting .ShoppingCartDetailedTile .featureRecommendation {
     font-weight: normal;
 }
+
+.itemPreface .itemInstructions,
+.itemPreface .itemDisclaimer {
+    color: white;
+    background-color: var(--header-toolbar-color);
+    font-size: var(--font-size-medium);
+    font-family: 'OpenSans';
+    margin: 20px;
+    padding: 10px;
+    opacity: 0.9;
+    font-weight: normal;
+    white-space: break-spaces;
+}
+
+.itemPreface .itemDisclaimer {
+    font-weight: bold;
+}
+
+
 
   

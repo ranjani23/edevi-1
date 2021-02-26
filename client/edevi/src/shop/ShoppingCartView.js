@@ -114,6 +114,21 @@ const useStyles = makeStyles((theme) => ({
   }
 
 }));
+
+function ItemInstructions({shoppingItem}) {
+  
+  return (
+      <div className='itemPreface'>
+          <div className='itemInstructions'> {shoppingItem.itemInstructions}</div>
+          {
+            shoppingItem.itemDisclaimer && (
+              <div className='itemDisclaimer'> {shoppingItem.itemDisclaimer}</div>
+            )
+          }
+      </div>
+  )
+}
+
  
 function ShoppingCartView(props) {
   const classes = useStyles();
@@ -176,6 +191,11 @@ function ShoppingCartView(props) {
             onClick={handleCheckoutClick}
           />
         </div>
+        {
+          currentDetailedItemView.itemInstructions && (
+            <ItemInstructions shoppingItem={currentDetailedItemView}/>
+          )
+        }
         <grid className={'ShoppingCartGList ' + currentDetailedItemView.itemName} cols={1}>
           {currentDetailedItemView.itemCartView.map((shoppingItem) => (
             <div className='ShoppingTileParentLarge'>

@@ -2,25 +2,31 @@ import React, { Component } from "react";
 import '../css/About.css';
 import edeviPreview from '../images/edeviPreview.png';
 import glitchPreview from '../images/glitch.png';
-
 import supportedBy from '../images/SupportedBy.png';
 import featureListBullet from '../images/featureDiamond.svg';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import ServerConstants from '../enums/ServerConstants';
+import literacyPledgeEnglish from '../docs/eDevi_Web_Media_Literacy_Page_English.pdf';
+import literacyPledgeHindi from '../docs/eDevi_Web_Media_Literacy_Page_Hindi.pdf';
+
+const pledgeMap = {
+  pledgeEnglish: literacyPledgeEnglish,
+  pledgeHindi: literacyPledgeHindi
+}
 
 function PledgePrompt () {
 
   function redirectToAsset(assetName) {
-
+    window.open(pledgeMap[assetName]);
   }
 
   return (
     <div className='PledgePrompt'>
         <div className='recommendation'>We recommend you to take the Media literacy pledge first</div>
          <div className='ButtonContainer'>
-           <Button variant="outlined"> English </Button>
-           <Button variant="outlined"> Hindi </Button>
+           <Button variant="outlined" onClick={()=>redirectToAsset('pledgeEnglish')}> English </Button>
+           <Button variant="outlined" onClick={()=>redirectToAsset('pledgeHindi')}> Hindi </Button>
          </div>
     </div>
   )

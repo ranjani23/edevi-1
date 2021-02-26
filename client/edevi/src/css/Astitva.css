@@ -1,0 +1,106 @@
+.astitvaBlock{
+    font-family:'Open Sans regular';
+    color: white;
+    padding: 20px;
+}
+.astitvaBlock h3.title{
+    position: relative;
+}
+h3.title::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    top: 35px;
+    left: 0px;
+    background-color:#252850;
+}
+.astitvaListBlock{
+    background-color:#252850;
+    border-radius: 4.5px;
+    margin-top: 20px;
+    padding: 20px;
+    color: white;
+}
+.astitvaListBlock ul{
+    list-style-image: url("../images/Blue\ diamond.svg");
+}
+.astitvaBlock ul li{
+    font-size: 18px;
+    padding:10px;
+}
+.astitvaContributions{
+    font-family:"OpenSans";
+    color: white;
+}
+.astitvaContributions h2,h3{
+    padding: 10px 0px;
+}
+.contributionsBlock{
+    margin: 0px 50px;
+    display: grid;
+    grid-template-columns: repeat(4,300px);
+    grid-gap: 20px;
+}
+.singleContribution{
+    font-weight: bold;
+background-color:#2A2C52;
+border-radius: 10px;
+}
+.singleContribution img{
+    width: 100%;
+}
+
+.contentOfChild{
+    background-color: #4B4D6C;
+    padding: 20px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+.percent{
+    padding: 10px;
+    font-size: 30px;
+    font-family:"OpenSans-SemiBold";
+    position: relative;
+}
+.percent p{
+    position: relative;
+}
+.percent p::before{
+    position: absolute;
+    content: "";
+    max-width: 70%;
+    width: 70%;
+    height: 5px;
+    top:40px;
+    left: 0px;
+    background-color:#4B4D6C;
+    border-radius:10px;
+}
+.percent p::after{
+    position: absolute;
+    content: "";
+    max-width: 80%;
+    width: 50%;
+    height: 5px;
+    top:40px;
+    left: 0px;
+    background-color:#FFD800;
+    border-radius:10px;
+}
+.percent img{
+    position: absolute;
+    top: 35px;
+    left: 100px;
+    width: 10%;
+}
+
+@media(max-width:500px){
+.contributionsBlock{
+margin: 0px 25px;
+grid-template-columns: 1fr;
+grid-gap: 20px;
+}
+}

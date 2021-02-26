@@ -12,6 +12,7 @@ import PledgeScreen from './temple/PledgeScreen';
 import CardDeck from './DeckOfCards/CardDeck';
 import GetInTouch from './getInTouch/GetInTouch';
 import TermsAndConditions from './about/TermsAndConditions';
+import ARScreen from './temple/ARScreen';
 
 
 class Routes extends Component {
@@ -32,6 +33,7 @@ class Routes extends Component {
                     <Route exact path='/Glitch/Pledge' component={PledgeScreen}/>
                     <Route exact path='/temple' component={LandingPageModule}/>
                     <Route exact path='/temple/Glitch' component={GlitchScreen}/>
+                    <Route exact path='/Glitch/Pledge/ARScreen' component={ARScreen}/>
                     <Route exact path='/shop' component={ShoppingModule}/>
                     <Route exact path='/shop/Checkout' component={CheckoutCartView}/>
                     <Route exact path='/shop/Temple' component={ShoppingCartView}/>

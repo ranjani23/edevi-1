@@ -56,7 +56,7 @@ export default function CardDeck() {
 
     return (
         <div className='DeckOfCards' onClick={incr}>
-            <div className={'Card ' + 'top'} style={styles}>
+            <div className={'Card ' + 'top '} style={styles}>
                 {currentCard.Text && 
                 (<div className={'TextContent '}><pre> {currentCard.Text}</pre>
                 </div>)}

@@ -1,21 +1,40 @@
 import React, { Component } from "react";
 import '../css/About.css';
 import edeviPreview from '../images/edeviPreview.png';
+import glitchPreview from '../images/glitch.png';
+
 import supportedBy from '../images/SupportedBy.png';
 import featureListBullet from '../images/featureDiamond.svg';
+import Divider from '@material-ui/core/Divider';
+import Button from '@material-ui/core/Button';
+
+function PledgePrompt () {
+  return (
+    <div className='PledgePrompt'>
+        <div className='recommendation'>We recommend you to take the Media literacy pledge first</div>
+         <div className='ButtonContainer'>
+           <Button variant="outlined"> English </Button>
+           <Button variant="outlined"> Hindi </Button>
+         </div>
+    </div>
+  )
+}
 
 
 function AboutModule() {
   return (
     <div className="AboutModule">
         <div className='aboutTitle'>About eDevi</div>
+        <Divider />
+        <PledgePrompt />
+
         <div className='aboutPart1'>
           The Internet has no master but it has a deity - a Goddess. <i><b>Her Holiness(HH) eDevi</b></i> is an avatar that manifests the power of the Internet. She may bestow upon you a smoother internet connection or reduce buffer time. You can also request her blessings for successful online romances, interviews, and data privacy. 
-          <br/>
+          <br/><br/>
           However, her main blessing is to those who are yet to access and experience the beauty and prowess of the Internet. She is especially fond of learners and artisans. She values both altruism and the pursuit of knowledge in humankind. She will always help bridge the digital divide and the resulting participation gap. 
-          <br/>
+          <br/><br/>
           HH is represented by Glitch, the sacred gatekeeper and First Disciple. He represents HH in all worldly matters while she attends to the virtual.
-          <br/>
+          <br/><br/>
           This portal enables visitors and pilgrims to present offerings, perform e-puja (ritual prayer), offer e-seva (digital service) and experience e-darshans (blessings in person) from any place in the world. That’s the power of eDevi and the internet! You can also do e-daan (donation) to support Her Holiness’s vision.  
         </div>
         <div className='aboutHHTitle'>HH eDevi</div>
@@ -23,9 +42,9 @@ function AboutModule() {
         <div className='edeviImageDesc'>Her Holiness is the Goddess of the Internet</div>
         <div className='aboutPart1'>
             <i>HH</i> is energy personified! Her eyes survey the past, present, and future; even the dark edges of the internet. HH always sees you even as her eyes are obscured from human sight, adorned as they are by a Virtual Reality (VR) headset. The wifi signal radiating proudly on her forehead signifies that HH is all perceiving, all knowing, omnipresent. If HH is angered, the signal will pause to reveal her vanquishing third-eye. You do not want to earn the wrath of eDevi. 
-            <br/>
+            <br/> <br/>
             After all, <i>HH</i> holds in her six hands the key to a prosperous digital life - 
-            <br/>
+            <br/><br/>
 
             <ul>
               <li><img src={featureListBullet} className='FeatureListBullet'/> 
@@ -43,14 +62,14 @@ function AboutModule() {
             </ul>
             <br/>
              Her majestic and intricate wings allow her to travel above all realms - virtual and real, spatial and chronological. 
-            <br/>
+            <br/><br/>
             In her raudra avatar, when angered into a tempest, HH will hold up the cause of human misery and encourage equity. In her bhadra avatar, when generous and giving, HH will bestow health and freedom from hunger. At all other times HH is in the mangalasundari avatar, signifying the appeal and vast potential of the Internet. 
-            <br/>
+            <br/><br/>
             Devotees can offer HH virtual objects from the <a href=''>temple shop</a>, <a href=''>leave a message</a>, <a href=''>create memes</a>, use <span className='specialText'>#eDevi</span> in social media posts, and donate generously to her vision for digital inclusion.
         </div>
 
          <div className='GlitchTitle'>Glitch</div>
-         <img src={edeviPreview} className='glitchPreview'/>
+         <img src={glitchPreview} className='glitchPreview'/>
         <div className='glitchImageDesc'>Sacred. First Disciple. Gatekeeper.</div>
         <div className='aboutPart2'>
         The Devi’s emissary has eyes of every colour you can perceive. A two-headed warrior in battle - never wounded - always aware even when invisible. A seeker, a follower, a devotee. A monk, a dreamer, a bard. Also, the gatekeeper to the Devi’s abode. 
@@ -69,19 +88,21 @@ function AboutModule() {
         </div>
         <div className='aboutPart2'>
           <div className='createdByTitle'>eDevi SQUAD</div>
-          <div className='createdByTitle'>Created by Anandana Kapur</div>
-          <div className='aboutPart2'>
-          with Neeraj Gudipati, Shilpa Rajpurohit, Eesha Deshpande, Nikhil Rajpurohit, Ranjani Rajagopalan and Saugata Paul, Aoun Hassan, Suraaj Ajithakumar, Vikash Raj, Amruta Supate, Vivek-Abhishek, Vishnu Rajeev, Samyuktha Krishna, Miron D’Souza, Samad, Saqib, Unnikrishnan Rajeev</div>
-          <div className='createdByTitle'>Special Thanks</div>
-          <div className='aboutPart2'>
+          <div className='createdBy'>Created by <b>Anandana Kapur</b></div><br/>
+            <i>with</i> Neeraj Gudipati, Shilpa Rajpurohit, Eesha, Ranjani Rajagopalan, Unnikrishnan Rajeev, Saugata Paul, Nikhil Rajpurohit, Aoun Hassan, Suraaj Ajithakumar, Vikash Raj, Amruta Supate, Vivek-Abhishek, Shweta Hejib, Samyuktha Krishna, Miron D’Souza and Siddharth Sogani, Open Source Raid Guild, Sachin Singh, Dhara Bhavsar.
+          <br/>  <br/>
+          <div className='specialThanks'><b>Special Thanks</b></div>
             A R Ramanathan, Stephanos Stephanides, Nagma Sahi Ansari, Saudamini Jain, Anuranjan Pegu, Arjun Soni, Danny Goldfield, Namrata Gurung
-          </div>
         </div>
-        <div className='createdByTitle'>Disclaimer</div>
         <div className='aboutPart2'>
-          eDevi is an augmented reality avatar - part-imagination, part-code. The project does not intend to hurt anybody. Space, time, names, characters, events and incidents have been rearranged to suit the experience of the darshan. Resemblance to actual persons, living or dead, or actual events is purely coincidental. We regret, in advance, any unintentional hurt, harm, distress, or injury resulting from this website. The opinions expressed are primarily those of algorithms and should not be confused with those of the creator’s. This is, after all,  an AI-enabled experience and no human can predict and therefore be held responsible for the stories it tells. The digital divide and participation gap, however, are very real. In reality, these need to be addressed and alleviated.
+          <div className='createdByTitle'>Disclaimer</div>
+           <div>eDevi is an augmented reality avatar - part-imagination, part-code. The project does not intend to hurt anybody. Space, time, names, characters, events and incidents have been rearranged to suit the experience of the darshan. Resemblance to actual persons, living or dead, or actual events is purely coincidental. We regret, in advance, any unintentional hurt, harm, distress, or injury resulting from this website. The opinions expressed are primarily those of algorithms and should not be confused with those of the creator’s. This is, after all,  an AI-enabled experience and no human can predict and therefore be held responsible for the stories it tells. The digital divide and participation gap, however, are very real. In reality, these need to be addressed and alleviated.</div>
         </div>
-        
+        <div className='aboutPart2'>
+          <div className='createdByTitle'>License protection</div>
+          <div>© 2021 Anandana Kapur.  All rights reserved </div>
+        </div>
+        <a href ='' className='Terms'>Terms and Conditions</a>    
     </div>
   );
 }

@@ -7,7 +7,31 @@
 .AboutModule .aboutTitle,
 .AboutModule .aboutHHTitle,
 .AboutModule .GlitchTitle{
-    font-size: var(--font-size-medium);
+    font-size: 18px;
+    font-weight: bold;
+    color: #ececf0;
+    font-family: Lora,Italic;
+    /* font-style: italic; */
+}
+
+.AboutModule .MuiDivider-root {
+    background-color: #252850;
+    margin-top:10px;
+}
+
+.AboutModule .PledgePrompt .recommendation {
+    font-size: 12px;
+    margin: 16px 25px 12px 26px;
+}
+
+.AboutModule .PledgePrompt button {
+    font-size: var(--font-size-small);
+    color: #ececf0;
+    text-transform: none;
+    border-color: #2f4fff;
+    margin: 2%;
+    width: 40%;
+    box-sizing: border-box;
 }
 
 .AboutModule .aboutPart1,
@@ -77,4 +101,25 @@
 
 .SidePanel .MuiDivider-root {
     background-color: #555556;
+}
+
+.aboutPart2 .createdByTitle {
+    font-size: var(--font-size-medium);
+}
+
+.aboutPart2 .createdByTitle {
+    font-size: var(--font-size-medium);
+    font-weight: bold;
+}
+
+.AboutModule .Terms {
+    color: #fedc31;
+    font-size: var(--font-size-small);
+    margin: 10px;
+    padding: 10px;
+}
+
+.AboutModule .specialThanks {
+    font-size: var(--font-size-small);
+    font-weight: bold;
 }
